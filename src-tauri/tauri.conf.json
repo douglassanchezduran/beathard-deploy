@@ -31,7 +31,10 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ],
-    "resources": ["static/dist/*"],
+    "resources": [
+      "../dist/**/*",
+      "static/dist/**/*"
+    ],
     "macOS": {
       "entitlements": "./Entitlements.plist"
       

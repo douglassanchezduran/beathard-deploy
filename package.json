@@ -10,10 +10,11 @@
     "tauri": "tauri",
     "tauri:dev": "tauri dev",
     "tauri:build": "tauri build",
-    "tauri:dev:debug": "RUST_LOG=debug tauri dev",
-    "tauri:dev:info": "RUST_LOG=info tauri dev",
-    "tauri:dev:error": "RUST_LOG=error tauri dev",
-    "tauri:build:production": "RUST_LOG=error tauri build"
+    "build:static": "cd src-tauri/static && npm run build",
+    "tauri:dev:debug": "npm run build:static && RUST_LOG=debug tauri dev",
+    "tauri:dev:info": "npm run build:static && RUST_LOG=info tauri dev",
+    "tauri:dev:error": "npm run build:static && RUST_LOG=error tauri dev",
+    "tauri:build:production": "npm run build:static && RUST_LOG=error tauri build"
   },
   "dependencies": {
     "@heroui/react": "^2.7.11",
